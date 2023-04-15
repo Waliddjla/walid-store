@@ -2,6 +2,7 @@ import './App.css';
 import React, {useState} from 'react';
 import Category from './components/Category';
 import { getCategorie, getProduct } from './Fetcher';
+import CategoryProduct from './components/categoryProduct';
 
 
 function App () {
@@ -31,10 +32,8 @@ const renderCategories =() => {
     );
 }
 const renderProducts = () => {
-  return products.data.map(p => 
-    <div>{p.title}</div>
-    )
-}
+   return products.data.map(p => <CategoryProduct {...p}>{p.title}=</CategoryProduct>);
+  }
 
   return (
     <React.Fragment>
@@ -46,11 +45,11 @@ const renderProducts = () => {
       {categorie.errorMessage && <div>Error: {categorie.errorMessage} </div>}
       {categorie.data && renderCategories()}
       </nav>
-      <article>
+      <main>
       <h1>Products</h1>
       {products.errorMessage && <div>Error: {products.errorMessage} </div>}
       { products.data && renderProducts() }
-      </article>
+      </main>
     </section>
     <footer>
       footer
