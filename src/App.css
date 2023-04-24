@@ -142,6 +142,9 @@ footer {
 .category-product-action button:last-child {
   background-color: darkgray;
 }
+.product-description {
+  grid-column: 1/span 3;
+}
 
 
 

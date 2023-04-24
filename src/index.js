@@ -4,6 +4,7 @@ import App from './App';
 import ProductDetail from './components/productDetail';
 import Basket from './components/basket';
 import Checkout from './components/checkout';
+import Category from './components/Category';
 import {
     BrowserRouter,
     Routes,
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route path="basket" element={<Basket></Basket>}></Route>
         <Route path="checkout" element={<Checkout></Checkout>}></Route>
         <Route path="products/:productId" element={<ProductDetail></ProductDetail>}></Route>
+        <Route path="categories/:categotyId" element={<Category></Category>}></Route>
     </Routes>
 
     </BrowserRouter>

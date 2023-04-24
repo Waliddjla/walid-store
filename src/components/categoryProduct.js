@@ -1,5 +1,14 @@
 import React from 'react';
+// import styled from 'styled-components';
 import {Link, useNavigate} from 'react-router-dom';
+
+// const ProductTitle = styled.div`
+//     grid-column: 1 / span 3;
+//     color: darkslategray;
+//     font-weight: bold;
+//     font-size: 1.5em;
+//     padding-left: 10px;
+// `;
 
 const CategoryProduct = ({id, title, image, specs, features, price, stock }) => {
     const navigate = useNavigate();
@@ -10,7 +19,7 @@ const CategoryProduct = ({id, title, image, specs, features, price, stock }) => 
     </div>
     <figure>
         <div className='category-product-image-container'>
-            <img src={`./assets/${image}`} alt= {title}/>
+            <img src={`/assets/${image}`} alt= {title}/>
         </div>
     </figure>
     <aside>
