@@ -1,27 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "./index.css";
 import App from './App';
-import ProductDetail from './components/productDetail';
-import Basket from './components/basket';
-import Checkout from './components/checkout';
-import Category from './components/Category';
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-  } from "react-router-dom";
+import CartContextProvider from './contexts/cartcontex';
+
 ReactDOM.render(
     <React.StrictMode>
-    <BrowserRouter>
-    <Routes>
-        <Route path="/" element={<App/>}></Route>
-        <Route path="basket" element={<Basket></Basket>}></Route>
-        <Route path="checkout" element={<Checkout></Checkout>}></Route>
-        <Route path="products/:productId" element={<ProductDetail></ProductDetail>}></Route>
-        <Route path="categories/:categotyId" element={<Category></Category>}></Route>
-    </Routes>
-
-    </BrowserRouter>
+    <CartContextProvider>
+    <App/>
+    </CartContextProvider>
     </React.StrictMode>,
     document.getElementById('root')
 

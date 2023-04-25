@@ -26,7 +26,7 @@ const ProductDetail = () => {
     </div>
     <figure>
         <div className='category-product-image-container'>
-            <img src={`./assets/$${products.data.image}`} alt= {products.data.title}/>
+            <img src={`/assets/$${products.data.image}`} alt= {products.data.title}/>
         </div>
     </figure>
     <aside>
